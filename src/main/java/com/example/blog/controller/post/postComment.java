@@ -1,7 +1,7 @@
 package com.example.blog.controller.post;
 
 import com.example.blog.dao.CommentDao;
-import com.example.blog.dao.SearchCmmtsWithWordService;
+//import com.example.blog.dao.SearchCmmtsWithWordService;
 import com.example.blog.domain.elasticDao.SrchbleCommt;
 import com.example.blog.processor.RabbitMQSender;
 import lombok.extern.slf4j.Slf4j;
