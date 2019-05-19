@@ -11,6 +11,7 @@ import java.util.List;
  * Created by debnathchatterjee on 19/05/19.
  */
 
+/*
 public class SearchCmmtsWithWordService {
 
     @Autowired
@@ -28,3 +29,4 @@ public class SearchCmmtsWithWordService {
         return commentSearchRepository.findByWords(word);
     }
 }
+*/

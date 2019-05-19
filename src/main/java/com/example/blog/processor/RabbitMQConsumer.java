@@ -1,6 +1,6 @@
 package com.example.blog.processor;
 
-import com.example.blog.dao.SearchCmmtsWithWordService;
+//import com.example.blog.dao.SearchCmmtsWithWordService;
 import com.example.blog.domain.elasticDao.SrchbleCommt;
 import com.example.blog.domain.pojo.InputComment;
 import com.fasterxml.jackson.databind.ObjectMapper;
