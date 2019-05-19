@@ -20,8 +20,8 @@ public class RabbitMQConsumer {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @Autowired
-    private SearchCmmtsWithWordService searchCmmtsWithWordService;
+    /*@Autowired
+    private SearchCmmtsWithWordService searchCmmtsWithWordService;*/
 
     @RabbitListener(queues = "comment.rabbitmq.queue")
     public void receiveMessage(InputComment publishComment) {
