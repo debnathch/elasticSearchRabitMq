@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by debnathchatterjee on 19/05/19.
  */
-@Repository
+/*@Repository*/
 public interface CommentSearchRepository extends ElasticsearchRepository<SrchbleCommt, String> {
 
     List<SrchbleCommt> findByWords(String word);

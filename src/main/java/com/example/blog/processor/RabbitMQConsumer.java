@@ -27,13 +27,13 @@ public class RabbitMQConsumer {
     public void receiveMessage(InputComment publishComment) {
         log.info("Recieved Comment From RabbitMQ ****** : " + publishComment.getBody_comment());
 
-        SrchbleCommt srchbleCommt = new SrchbleCommt(String.valueOf(publishComment.getComments_id()),
+        /*SrchbleCommt srchbleCommt = new SrchbleCommt(String.valueOf(publishComment.getComments_id()),
                 publishComment.getComments_id(),publishComment.getPosts_id()
         ,publishComment.getUser_id(),publishComment.getBody_comment(), publishComment.getLike_count(),
                 publishComment.getCreated_at(),publishComment.getUpdated_at());
 
 
-        searchCmmtsWithWordService.save(srchbleCommt);
+        searchCmmtsWithWordService.save(srchbleCommt);*/
     }
 
 }
