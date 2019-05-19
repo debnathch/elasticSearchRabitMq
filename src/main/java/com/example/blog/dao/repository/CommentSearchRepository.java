@@ -1,6 +1,6 @@
 package com.example.blog.dao.repository;
 
-import com.example.blog.domain.dao.SrchbleCommt;
+import com.example.blog.domain.elasticDao.SrchbleCommt;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 import java.util.List;

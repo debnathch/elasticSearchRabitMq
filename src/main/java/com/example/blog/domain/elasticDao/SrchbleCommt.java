@@ -1,25 +1,23 @@
-package com.example.blog.domain.dao;
+package com.example.blog.domain.elasticDao;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import java.io.Serializable;
+import java.sql.Timestamp;
+
 import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
  * Created by debnathchatterjee on 19/05/19.
  */
-
 @Data
-@Document(indexName = "blog", type = "comments",shards = 1, replicas = 0,
+@Document(indexName = "blog", type = "comment", shards = 1, replicas = 0,
         refreshInterval = "-1")
-public class SrchbleCommt  {
+public class SrchbleCommt implements Serializable  {
 
     @Id
     private String id;
@@ -38,7 +36,7 @@ public class SrchbleCommt  {
 
     private Timestamp updated_at;
 
-    public SrchbleCommt(
+    public SrchbleCommt(String id,
                         int comments_id,
                         int posts_id,
                         int user_id,
@@ -47,6 +45,7 @@ public class SrchbleCommt  {
                         Timestamp created_at,
                         Timestamp updated_at) {
 
+        this.id = id;
         this.comments_id = comments_id;
         this.posts_id = posts_id;
         this.user_id = user_id;
