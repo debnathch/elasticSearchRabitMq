@@ -15,8 +15,8 @@ import java.sql.Timestamp;
  * Created by debnathchatterjee on 19/05/19.
  */
 @Data
-/*@Document(indexName = "blog", type = "comment", shards = 1, replicas = 0,
-        refreshInterval = "-1")*/
+@Document(indexName = "blog", type = "SrchbleCommt", shards = 1, replicas = 0,
+        refreshInterval = "-1")
 public class SrchbleCommt implements Serializable  {
 
     @Id

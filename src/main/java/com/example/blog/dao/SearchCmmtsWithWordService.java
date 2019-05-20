@@ -1,6 +1,6 @@
 package com.example.blog.dao;
 
-//import com.example.blog.dao.repository.CommentSearchRepository;
+import com.example.blog.dao.repository.CommentSearchRepository;
 import com.example.blog.domain.elasticDao.SrchbleCommt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,8 +10,7 @@ import java.util.List;
 /**
  * Created by debnathchatterjee on 19/05/19.
  */
-
-/*
+@Service
 public class SearchCmmtsWithWordService {
 
     @Autowired
@@ -29,4 +28,3 @@ public class SearchCmmtsWithWordService {
         return commentSearchRepository.findByWords(word);
     }
 }
-*/

@@ -2,6 +2,7 @@ package com.example.blog.controller.post;
 
 import com.example.blog.dao.CommentDao;
 //import com.example.blog.dao.SearchCmmtsWithWordService;
+import com.example.blog.dao.SearchCmmtsWithWordService;
 import com.example.blog.domain.elasticDao.SrchbleCommt;
 import com.example.blog.processor.RabbitMQSender;
 import lombok.extern.slf4j.Slf4j;
@@ -35,8 +36,8 @@ public class postComment {
     @Autowired
     private CommentDao commentDao;
 
-   /* @Autowired
-    private SearchCmmtsWithWordService searchCmmtsWithWordService;*/
+    @Autowired
+    private SearchCmmtsWithWordService searchCmmtsWithWordService;
 
     @RequestMapping(value = "/addToComment", method = RequestMethod.POST)
     public ResponseEntity<?> addToComment(@Valid @RequestBody InputComment inputComment) {
@@ -58,7 +59,7 @@ public class postComment {
         return ResponseEntity.ok(result);
     }
 
-   /* @RequestMapping(value = "/searchWordsInComments", method = RequestMethod.POST)
+    @RequestMapping(value = "/searchWordsInComments", method = RequestMethod.POST)
     public ResponseEntity<?> searchWordInComment(@Valid @RequestBody String searchedWord) {
 
         List<SrchbleCommt> commtsList=  searchCmmtsWithWordService.findOneWord(searchedWord);
@@ -68,7 +69,7 @@ public class postComment {
         }
         return ResponseEntity.ok(responseCommentMap);
 
-    }*/
+    }
 
 
     public boolean postToQueue(InputComment inputComment){
