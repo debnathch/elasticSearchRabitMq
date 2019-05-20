@@ -10,7 +10,7 @@ import java.sql.Timestamp;
  * Created by debnathchatterjee on 19/05/19.
  */
 @Entity
-@Table(name="comments" , schema = "blog")
+@Table(name="comments" , schema = "heroku_b0de01547793a0c")
 @Data
 public class Comment implements Serializable {
 
